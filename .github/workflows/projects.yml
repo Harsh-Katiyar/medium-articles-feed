@@ -1,0 +1,137 @@
+name: Update Portfolio Projects
+
+on:
+  schedule:
+    - cron: "30 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-projects:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      - name: Fetch portfolio repositories
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+        run: |
+
+          gh api \
+            --paginate \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2026-03-10" \
+            "/users/Harsh-Katiyar/repos?per_page=100&sort=updated" \
+            > repos.json
+
+
+      - name: Generate projects.json
+        run: |
+
+          python3 <<'PY'
+
+          import json
+
+
+          with open("repos.json", "r", encoding="utf-8") as f:
+              repos = json.load(f)
+
+
+          projects = []
+
+
+          for repo in repos:
+
+              topics = repo.get("topics", [])
+
+
+              # Only repositories with the "portfolio"
+              # topic are included.
+              if "portfolio" not in topics:
+                  continue
+
+
+              project = {
+
+                  "name": repo.get("name", ""),
+
+                  "title": repo.get("name", ""),
+
+                  "description": repo.get("description") or
+                      "Security project and hands-on cybersecurity work.",
+
+                  "url": repo.get("html_url", ""),
+
+                  "language": repo.get("language") or "",
+
+                  "topics": topics,
+
+                  "stars": repo.get("stargazers_count", 0),
+
+                  "forks": repo.get("forks_count", 0),
+
+                  "updated": repo.get("updated_at", ""),
+
+                  "pushed": repo.get("pushed_at", ""),
+
+                  "featured": "portfolio-featured" in topics
+
+              }
+
+
+              projects.append(project)
+
+
+          # Featured projects first,
+          # then recently updated projects.
+          projects.sort(
+              key=lambda p: (
+                  not p["featured"],
+                  p["updated"]
+              ),
+              reverse=False
+          )
+
+
+          with open(
+              "projects.json",
+              "w",
+              encoding="utf-8"
+          ) as f:
+
+              json.dump(
+                  {
+                      "projects": projects
+                  },
+                  f,
+                  indent=2,
+                  ensure_ascii=False
+              )
+
+          PY
+
+
+      - name: Commit updated projects
+        run: |
+
+          git config user.name "github-actions[bot]"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add projects.json
+
+          git diff --cached --quiet || \
+            git commit \
+            -m "Update portfolio projects"
+
+          git push

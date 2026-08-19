@@ -29,7 +29,7 @@ jobs:
           gh api \
             --paginate \
             -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2026-03-10" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
             "/users/Harsh-Katiyar/repos?per_page=100&sort=updated" \
             > repos.json
 
@@ -42,48 +42,172 @@ jobs:
           import json
 
 
-          with open("repos.json", "r", encoding="utf-8") as f:
+          # -----------------------------------------
+          # Load GitHub repositories
+          # -----------------------------------------
+
+          with open(
+              "repos.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+
               repos = json.load(f)
+
+
+          # -----------------------------------------
+          # Load portfolio configuration
+          # -----------------------------------------
+
+          with open(
+              "portfolio-config.json",
+              "r",
+              encoding="utf-8"
+          ) as f:
+
+              config = json.load(f)
+
+
+          portfolio_config = config.get(
+              "projects",
+              {}
+          )
 
 
           projects = []
 
 
+          # -----------------------------------------
+          # Process repositories
+          # -----------------------------------------
+
           for repo in repos:
 
-              topics = repo.get("topics", [])
+              topics = repo.get(
+                  "topics",
+                  []
+              )
 
 
-              # Only repositories with the "portfolio"
-              # topic are included.
+              # Only repositories marked
+              # with "portfolio" are included.
               if "portfolio" not in topics:
                   continue
 
 
+              repo_name = repo.get(
+                  "name",
+                  ""
+              )
+
+
+              custom = portfolio_config.get(
+                  repo_name,
+                  {}
+              )
+
+
+              # -------------------------------------
+              # Custom portfolio information
+              # -------------------------------------
+
+              title = custom.get(
+                  "title",
+                  repo_name
+              )
+
+
+              subtitle = custom.get(
+                  "subtitle",
+                  ""
+              )
+
+
+              description = custom.get(
+                  "description",
+                  repo.get("description")
+                  or
+                  "Security project and hands-on cybersecurity work."
+              )
+
+
+              category = custom.get(
+                  "category",
+                  "Cybersecurity Project"
+              )
+
+
+              tools = custom.get(
+                  "tools",
+                  []
+              )
+
+
+              featured = custom.get(
+                  "featured",
+                  "portfolio-featured" in topics
+              )
+
+
+              order = custom.get(
+                  "order",
+                  999
+              )
+
+
+              # -------------------------------------
+              # Create portfolio project
+              # -------------------------------------
+
               project = {
 
-                  "name": repo.get("name", ""),
+                  "name": repo_name,
 
-                  "title": repo.get("name", ""),
+                  "title": title,
 
-                  "description": repo.get("description") or
-                      "Security project and hands-on cybersecurity work.",
+                  "subtitle": subtitle,
 
-                  "url": repo.get("html_url", ""),
+                  "description": description,
 
-                  "language": repo.get("language") or "",
+                  "category": category,
+
+                  "tools": tools,
+
+                  "url": repo.get(
+                      "html_url",
+                      ""
+                  ),
+
+                  "language": repo.get(
+                      "language",
+                      ""
+                  ),
 
                   "topics": topics,
 
-                  "stars": repo.get("stargazers_count", 0),
+                  "stars": repo.get(
+                      "stargazers_count",
+                      0
+                  ),
 
-                  "forks": repo.get("forks_count", 0),
+                  "forks": repo.get(
+                      "forks_count",
+                      0
+                  ),
 
-                  "updated": repo.get("updated_at", ""),
+                  "updated": repo.get(
+                      "updated_at",
+                      ""
+                  ),
 
-                  "pushed": repo.get("pushed_at", ""),
+                  "pushed": repo.get(
+                      "pushed_at",
+                      ""
+                  ),
 
-                  "featured": "portfolio-featured" in topics
+                  "featured": featured,
+
+                  "order": order
 
               }
 
@@ -91,16 +215,23 @@ jobs:
               projects.append(project)
 
 
-          # Featured projects first,
-          # then recently updated projects.
+          # -----------------------------------------
+          # Sort projects
+          #
+          # Lower order number appears first.
+          # -----------------------------------------
+
           projects.sort(
               key=lambda p: (
-                  not p["featured"],
-                  p["updated"]
-              ),
-              reverse=False
+                  p["order"],
+                  not p["featured"]
+              )
           )
 
+
+          # -----------------------------------------
+          # Write projects.json
+          # -----------------------------------------
 
           with open(
               "projects.json",
@@ -117,13 +248,19 @@ jobs:
                   ensure_ascii=False
               )
 
+
+          print(
+              f"Generated {len(projects)} portfolio projects."
+          )
+
           PY
 
 
       - name: Commit updated projects
         run: |
 
-          git config user.name "github-actions[bot]"
+          git config user.name \
+            "github-actions[bot]"
 
           git config user.email \
             "41898282+github-actions[bot]@users.noreply.github.com"

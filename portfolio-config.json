@@ -1,0 +1,78 @@
+{
+  "projects": {
+    "scanflow-nmap-automation": {
+      "title": "ScanFlow",
+      "subtitle": "Nmap Automation & Reconnaissance",
+      "description": "An advanced Python-based wizard that automates Nmap scanning for ethical hacking, bug bounty, and network security workflows.",
+      "category": "Security Tool",
+      "tools": [
+        "Python",
+        "Nmap",
+        "NSE",
+        "Network Recon"
+      ],
+      "featured": true,
+      "order": 1
+    },
+
+    "awesome-hacker-engines": {
+      "title": "Awesome Hacker Engines",
+      "subtitle": "OSINT & Security Search",
+      "description": "A multi-engine OSINT and security search tool designed for researchers, penetration testers, and cybersecurity professionals.",
+      "category": "OSINT Tool",
+      "tools": [
+        "Python",
+        "OSINT",
+        "Threat Intelligence",
+        "Reconnaissance"
+      ],
+      "featured": true,
+      "order": 2
+    },
+
+    "OpenDetect": {
+      "title": "OpenDetect",
+      "subtitle": "Username OSINT & Enumeration",
+      "description": "An OSINT-based username discovery tool for cybersecurity, bug bounty, threat intelligence, and digital investigations.",
+      "category": "OSINT Tool",
+      "tools": [
+        "Python",
+        "OSINT",
+        "Enumeration",
+        "Digital Investigation"
+      ],
+      "featured": false,
+      "order": 3
+    },
+
+    "ScriptHound": {
+      "title": "ScriptHound",
+      "subtitle": "Nmap Script Discovery Utility",
+      "description": "A Python utility for searching Nmap script files and other files within directories with structured, readable output.",
+      "category": "Security Utility",
+      "tools": [
+        "Python",
+        "Nmap",
+        "Recon",
+        "File Search"
+      ],
+      "featured": false,
+      "order": 4
+    },
+
+    "google-dorks-bug-bounty": {
+      "title": "Google Dorks Bug Bounty",
+      "subtitle": "Google Dorking & Reconnaissance",
+      "description": "A collection of predefined Google search queries designed to support information gathering and reconnaissance workflows.",
+      "category": "Reconnaissance",
+      "tools": [
+        "Google Dorks",
+        "OSINT",
+        "Reconnaissance",
+        "Bug Bounty"
+      ],
+      "featured": false,
+      "order": 5
+    }
+  }
+}

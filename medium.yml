@@ -1,1 +1,78 @@
+name: Update Medium Articles
 
+on:
+  schedule:
+    - cron: "0 * * * *"
+
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-medium:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Medium RSS
+        run: |
+          curl -L \
+            -A "Mozilla/5.0" \
+            "https://medium.com/feed/@HarshKatiyar" \
+            -o medium.xml
+
+      - name: Generate articles.json
+        run: |
+          python3 <<'PY'
+          import xml.etree.ElementTree as ET
+          import json
+          import html
+          import re
+
+          tree = ET.parse("medium.xml")
+          root = tree.getroot()
+
+          articles = []
+
+          for item in root.findall("./channel/item")[:6]:
+
+              title = item.findtext("title", "").strip()
+              link = item.findtext("link", "").strip()
+              pub_date = item.findtext("pubDate", "").strip()
+              description = item.findtext("description", "").strip()
+
+              description = html.unescape(description)
+              description = re.sub(r"<[^>]+>", "", description)
+              description = re.sub(r"\s+", " ", description).strip()
+
+              articles.append({
+                  "title": title,
+                  "url": link,
+                  "date": pub_date,
+                  "description": description[:240]
+              })
+
+          with open("articles.json", "w", encoding="utf-8") as f:
+              json.dump(
+                  {"articles": articles},
+                  f,
+                  indent=2,
+                  ensure_ascii=False
+              )
+          PY
+
+      - name: Commit updated articles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add articles.json
+
+          git diff --cached --quiet || \
+            git commit -m "Update Medium articles"
+
+          git push

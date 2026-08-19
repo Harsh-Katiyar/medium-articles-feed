@@ -1,34 +1,49 @@
 {
   "projects": [
     {
-      "name": "OpenDetect",
-      "title": "OpenDetect",
-      "description": "A powerful OSINT-based username discovery tool for cybersecurity, bug bounty, threat intelligence, and digital investigations.",
-      "url": "https://github.com/Harsh-Katiyar/OpenDetect",
+      "name": "scanflow-nmap-automation",
+      "title": "ScanFlow",
+      "subtitle": "Nmap Automation & Reconnaissance",
+      "description": "An advanced Python-based wizard that automates Nmap scanning for ethical hacking, bug bounty, and network security workflows.",
+      "category": "Security Tool",
+      "tools": [
+        "Python",
+        "Nmap",
+        "NSE",
+        "Network Recon"
+      ],
+      "url": "https://github.com/Harsh-Katiyar/scanflow-nmap-automation",
       "language": "Python",
       "topics": [
-        "cybersecurity",
-        "enumeration",
-        "inforation-gathering",
-        "osint-tool",
-        "penetration-testing",
-        "portfolio",
-        "portfolio-featured",
-        "python",
-        "security-tools",
-        "username-extraction",
-        "usernamesearch"
+        "bug-bounty",
+        "cybersecurity-tools",
+        "ethical-hacking",
+        "network-scanner",
+        "nmap",
+        "nmap-automation",
+        "nmap-scan-script",
+        "pentesting-tools",
+        "portfolio"
       ],
-      "stars": 2,
+      "stars": 4,
       "forks": 0,
-      "updated": "2026-08-19T08:12:01Z",
-      "pushed": "2025-11-26T07:00:17Z",
-      "featured": true
+      "updated": "2026-08-19T08:00:27Z",
+      "pushed": "2025-08-27T12:46:19Z",
+      "featured": true,
+      "order": 1
     },
     {
       "name": "awesome-hacker-engines",
-      "title": "awesome-hacker-engines",
-      "description": "A professional multi-engine OSINT and hacker search tool for researchers, pentesters, and cybersecurity professionals.",
+      "title": "Awesome Hacker Engines",
+      "subtitle": "OSINT & Security Search",
+      "description": "A multi-engine OSINT and security search tool designed for researchers, penetration testers, and cybersecurity professionals.",
+      "category": "OSINT Tool",
+      "tools": [
+        "Python",
+        "OSINT",
+        "Threat Intelligence",
+        "Reconnaissance"
+      ],
       "url": "https://github.com/Harsh-Katiyar/awesome-hacker-engines",
       "language": "Python",
       "topics": [
@@ -57,60 +72,55 @@
       "forks": 0,
       "updated": "2026-08-19T08:12:34Z",
       "pushed": "2025-09-04T17:38:39Z",
-      "featured": true
+      "featured": true,
+      "order": 2
     },
     {
-      "name": "scanflow-nmap-automation",
-      "title": "scanflow-nmap-automation",
-      "description": "An advanced Python-based wizard that automates Nmap scans for ethical hacking, bug bounty, and network security.",
-      "url": "https://github.com/Harsh-Katiyar/scanflow-nmap-automation",
+      "name": "OpenDetect",
+      "title": "OpenDetect",
+      "subtitle": "Username OSINT & Enumeration",
+      "description": "An OSINT-based username discovery tool for cybersecurity, bug bounty, threat intelligence, and digital investigations.",
+      "category": "OSINT Tool",
+      "tools": [
+        "Python",
+        "OSINT",
+        "Enumeration",
+        "Digital Investigation"
+      ],
+      "url": "https://github.com/Harsh-Katiyar/OpenDetect",
       "language": "Python",
       "topics": [
-        "bug-bounty",
-        "cybersecurity-tools",
-        "ethical-hacking",
-        "network-scanner",
-        "nmap",
-        "nmap-automation",
-        "nmap-scan-script",
-        "pentesting-tools",
-        "portfolio"
-      ],
-      "stars": 4,
-      "forks": 0,
-      "updated": "2026-08-19T08:00:27Z",
-      "pushed": "2025-08-27T12:46:19Z",
-      "featured": false
-    },
-    {
-      "name": "google-dorks-bug-bounty",
-      "title": "google-dorks-bug-bounty",
-      "description": "Clicking the link opens Google with the query pre-filled",
-      "url": "https://github.com/Harsh-Katiyar/google-dorks-bug-bounty",
-      "language": "",
-      "topics": [
-        "bug-bounty",
-        "ethical-hacking",
-        "google-dorks",
-        "information-gathering",
-        "osint",
+        "cybersecurity",
+        "enumeration",
+        "inforation-gathering",
+        "osint-tool",
         "penetration-testing",
         "portfolio",
-        "recon-tools",
-        "reconnaissance",
+        "portfolio-featured",
+        "python",
         "security-tools",
-        "web-security"
+        "username-extraction",
+        "usernamesearch"
       ],
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
-      "updated": "2026-08-19T08:01:20Z",
-      "pushed": "2025-11-26T06:44:24Z",
-      "featured": false
+      "updated": "2026-08-19T08:12:01Z",
+      "pushed": "2025-11-26T07:00:17Z",
+      "featured": false,
+      "order": 3
     },
     {
       "name": "ScriptHound",
       "title": "ScriptHound",
-      "description": "A simple Python utility to search for Nmap script files (or any files) in a given directory.   Displays results in a clean tabular format.",
+      "subtitle": "Nmap Script Discovery Utility",
+      "description": "A Python utility for searching Nmap script files and other files within directories with structured, readable output.",
+      "category": "Security Utility",
+      "tools": [
+        "Python",
+        "Nmap",
+        "Recon",
+        "File Search"
+      ],
       "url": "https://github.com/Harsh-Katiyar/ScriptHound",
       "language": "Python",
       "topics": [
@@ -128,7 +138,42 @@
       "forks": 0,
       "updated": "2026-08-19T08:02:03Z",
       "pushed": "2025-08-27T05:59:25Z",
-      "featured": false
+      "featured": false,
+      "order": 4
+    },
+    {
+      "name": "google-dorks-bug-bounty",
+      "title": "Google Dorks Bug Bounty",
+      "subtitle": "Google Dorking & Reconnaissance",
+      "description": "A collection of predefined Google search queries designed to support information gathering and reconnaissance workflows.",
+      "category": "Reconnaissance",
+      "tools": [
+        "Google Dorks",
+        "OSINT",
+        "Reconnaissance",
+        "Bug Bounty"
+      ],
+      "url": "https://github.com/Harsh-Katiyar/google-dorks-bug-bounty",
+      "language": null,
+      "topics": [
+        "bug-bounty",
+        "ethical-hacking",
+        "google-dorks",
+        "information-gathering",
+        "osint",
+        "penetration-testing",
+        "portfolio",
+        "recon-tools",
+        "reconnaissance",
+        "security-tools",
+        "web-security"
+      ],
+      "stars": 1,
+      "forks": 0,
+      "updated": "2026-08-19T08:01:20Z",
+      "pushed": "2025-11-26T06:44:24Z",
+      "featured": false,
+      "order": 5
     }
   ]
 }

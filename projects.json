@@ -174,6 +174,40 @@
       "pushed": "2025-11-26T06:44:24Z",
       "featured": false,
       "order": 5
+    },
+    {
+      "name": "cybersecurity-labs-and-writeups",
+      "title": "cybersecurity-labs-and-writeups",
+      "subtitle": "",
+      "description": "Hands-on cybersecurity labs, SOC Analyst notes, Blue Team walkthroughs, TryHackMe & HTB writeups, LetsDefend investigations, Windows security, SIEM, and incident response.",
+      "category": "Cybersecurity Project",
+      "tools": [],
+      "url": "https://github.com/Harsh-Katiyar/cybersecurity-labs-and-writeups",
+      "language": "Python",
+      "topics": [
+        "blue-team",
+        "cybersecurity",
+        "cybersecurity-lab",
+        "cybersecurity-notes",
+        "hackthebox",
+        "htb-writeups",
+        "incident-response",
+        "letsdefend",
+        "portfolio",
+        "portfolio-featured",
+        "security-writeups",
+        "siem",
+        "soc",
+        "soc-analyst",
+        "tryhackme",
+        "tryhackme-writeups"
+      ],
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-08-26T22:02:42Z",
+      "pushed": "2026-08-26T21:57:49Z",
+      "featured": true,
+      "order": 999
     }
   ]
 }

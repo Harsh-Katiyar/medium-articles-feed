@@ -222,10 +222,8 @@ jobs:
           # -----------------------------------------
 
           projects.sort(
-              key=lambda p: (
-                  p["order"],
-                  not p["featured"]
-              )
+              key=lambda p: p.get("updated", ""),
+              reverse=True
           )
 
 

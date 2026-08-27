@@ -4,19 +4,37 @@
       "title": "Windows Fundamentals 2: Exploring Windows Tools from a SOC Analyst Perspective",
       "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-2-exploring-windows-tools-from-a-soc-analyst-perspective-39b0ac662b6d?source=rss-38fb3f606a9d------2",
       "date": "Thu, 27 Aug 2026 19:59:49 GMT",
-      "description": ""
+      "description": "Introduction Windows provides a large collection of built-in utilities for system administration, troubleshooting, configuration, and monitoring. For someone learning SOC operations, the important part is not memorizing every Windows utilit",
+      "tags": [
+        "windows",
+        "cybersecurity",
+        "learning",
+        "ethical-hacking"
+      ]
     },
     {
       "title": "Windows for SOC Analysts: A Complete Learning Roadmap from Beginner to Job-Ready",
       "url": "https://medium.com/@HarshKatiyar/windows-for-soc-analysts-a-complete-learning-roadmap-from-beginner-to-job-ready-b831f0e838cb?source=rss-38fb3f606a9d------2",
       "date": "Mon, 24 Aug 2026 14:01:04 GMT",
-      "description": ""
+      "description": "If you are starting your cybersecurity journey from scratch and want to become a SOC (Security Operations Center) Analyst , one skill area you cannot afford to ignore is Windows . Windows is one of the most important endpoint environments y",
+      "tags": [
+        "windows",
+        "information-security",
+        "networking",
+        "cybersecurity"
+      ]
     },
     {
       "title": "How to Build an Industry-Standard SOC Analyst Lab (Step-by-Step Guide: Beginner to Advanced)",
       "url": "https://medium.com/@HarshKatiyar/how-to-build-an-industry-standard-soc-analyst-lab-step-by-step-guide-beginner-to-advanced-1d6166b680e1?source=rss-38fb3f606a9d------2",
       "date": "Tue, 07 Apr 2026 14:36:01 GMT",
-      "description": ""
+      "description": "Breaking into cybersecurity — especially a SOC Analyst role — can feel frustrating when every job requires “experience.” So instead of waiting, I built my own. This guide walks you through creating a real industry-standard SOC lab , using t",
+      "tags": [
+        "cybersecurity",
+        "information-technology",
+        "information-security",
+        "soc-analyst"
+      ]
     }
   ]
 }

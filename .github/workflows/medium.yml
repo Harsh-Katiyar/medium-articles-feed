@@ -38,22 +38,88 @@ jobs:
 
           articles = []
 
+          # Medium RSS namespaces
+          namespaces = {
+              "content": "http://purl.org/rss/1.0/modules/content/",
+              "dc": "http://purl.org/dc/elements/1.1/"
+          }
+
           for item in root.findall("./channel/item")[:6]:
 
               title = item.findtext("title", "").strip()
               link = item.findtext("link", "").strip()
               pub_date = item.findtext("pubDate", "").strip()
+
+              # --------------------------------------------------
+              # DESCRIPTION
+              # --------------------------------------------------
+
               description = item.findtext("description", "").strip()
 
+              # If normal RSS description is empty,
+              # use Medium's full content instead.
+              if not description:
+                  content = item.findtext(
+                      "content:encoded",
+                      "",
+                      namespaces
+                  ).strip()
+
+                  description = content
+
+              # Decode HTML entities
               description = html.unescape(description)
-              description = re.sub(r"<[^>]+>", "", description)
-              description = re.sub(r"\s+", " ", description).strip()
+
+              # Remove script/style blocks
+              description = re.sub(
+                  r"<(script|style).*?</\1>",
+                  "",
+                  description,
+                  flags=re.I | re.S
+              )
+
+              # Remove HTML tags
+              description = re.sub(
+                  r"<[^>]+>",
+                  " ",
+                  description
+              )
+
+              # Clean whitespace
+              description = re.sub(
+                  r"\s+",
+                  " ",
+                  description
+              ).strip()
+
+              # --------------------------------------------------
+              # TAGS / CATEGORIES
+              # --------------------------------------------------
+
+              tags = []
+
+              for category in item.findall("category"):
+                  tag = category.text
+
+                  if tag:
+                      tag = html.unescape(tag).strip()
+
+                      if tag and tag not in tags:
+                          tags.append(tag)
+
+              # Limit tags to maximum 4
+              tags = tags[:4]
+
+              # --------------------------------------------------
+              # SAVE ARTICLE
+              # --------------------------------------------------
 
               articles.append({
                   "title": title,
                   "url": link,
                   "date": pub_date,
-                  "description": description[:240]
+                  "description": description[:240],
+                  "tags": tags
               })
 
           with open("articles.json", "w", encoding="utf-8") as f:

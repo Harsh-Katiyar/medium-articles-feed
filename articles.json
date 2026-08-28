@@ -1,6 +1,18 @@
 {
   "articles": [
     {
+      "title": "Windows Fundamentals 1: Building a Foundation for Windows Security and SOC Analysis",
+      "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-1-building-a-foundation-for-windows-security-and-soc-analysis-a8b13fea8322?source=rss-38fb3f606a9d------2",
+      "date": "Fri, 28 Aug 2026 14:01:04 GMT",
+      "description": "Introduction Before investigating a Windows security alert, it helps to understand what a normal Windows endpoint actually looks like. Windows Fundamentals 1 provides that foundation. The material introduces Windows editions, the graphical ",
+      "tags": [
+        "windows",
+        "blue-team",
+        "security-operation-center",
+        "cybersecurity"
+      ]
+    },
+    {
       "title": "Windows Fundamentals 2: Exploring Windows Tools from a SOC Analyst Perspective",
       "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-2-exploring-windows-tools-from-a-soc-analyst-perspective-39b0ac662b6d?source=rss-38fb3f606a9d------2",
       "date": "Thu, 27 Aug 2026 19:59:49 GMT",

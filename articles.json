@@ -1,6 +1,18 @@
 {
   "articles": [
     {
+      "title": "Windows Fundamentals 3: Understanding Built-In Windows Security from a SOC Perspective",
+      "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-3-understanding-built-in-windows-security-from-a-soc-perspective-76e2c1612469?source=rss-38fb3f606a9d------2",
+      "date": "Sun, 30 Aug 2026 05:01:02 GMT",
+      "description": "Introduction Windows provides a large number of security features designed to protect systems, applications, users, networks, and data. Windows Fundamentals 3 focuses on several of these built-in security mechanisms, including Windows Updat",
+      "tags": [
+        "soc-analyst",
+        "cyber-security-awareness",
+        "blue-team",
+        "security"
+      ]
+    },
+    {
       "title": "Windows Fundamentals 1: Building a Foundation for Windows Security and SOC Analysis",
       "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-1-building-a-foundation-for-windows-security-and-soc-analysis-a8b13fea8322?source=rss-38fb3f606a9d------2",
       "date": "Fri, 28 Aug 2026 14:01:04 GMT",

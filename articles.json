@@ -1,6 +1,18 @@
 {
   "articles": [
     {
+      "title": "Windows Active Directory Fundamentals: Domains, Users, Group Policy, Authentication, and Trusts",
+      "url": "https://medium.com/@HarshKatiyar/windows-active-directory-fundamentals-domains-users-group-policy-authentication-and-trusts-b3dce14e7d30?source=rss-38fb3f606a9d------2",
+      "date": "Tue, 01 Sep 2026 00:22:10 GMT",
+      "description": "Introduction Active Directory is one of the most important technologies to understand when working with enterprise Windows environments. For someone starting in cybersecurity, Active Directory can initially seem like a collection of unrelat",
+      "tags": [
+        "soc-analyst",
+        "information-security",
+        "cybersecurity",
+        "self-improvement"
+      ]
+    },
+    {
       "title": "Windows Fundamentals 3: Understanding Built-In Windows Security from a SOC Perspective",
       "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-3-understanding-built-in-windows-security-from-a-soc-perspective-76e2c1612469?source=rss-38fb3f606a9d------2",
       "date": "Sun, 30 Aug 2026 05:01:02 GMT",

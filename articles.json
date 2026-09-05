@@ -1,6 +1,17 @@
 {
   "articles": [
     {
+      "title": "Linux Fundamentals for SOC L1: From Basic Commands to Endpoint Investigation",
+      "url": "https://medium.com/@HarshKatiyar/linux-fundamentals-for-soc-l1-from-basic-commands-to-endpoint-investigation-41ce5d30de3a?source=rss-38fb3f606a9d------2",
+      "date": "Sat, 05 Sep 2026 02:06:00 GMT",
+      "description": "Linux knowledge is an important foundation for a SOC L1 analyst. You don’t necessarily need to become a Linux administrator or penetration tester before working in a SOC. What matters first is understanding how a Linux endpoint works, how u",
+      "tags": [
+        "cybersecurity",
+        "linkedin",
+        "linux"
+      ]
+    },
+    {
       "title": "Core Windows Processes: A SOC L1 Guide to Understanding What Normal Looks Like",
       "url": "https://medium.com/@HarshKatiyar/core-windows-processes-a-soc-l1-guide-to-understanding-what-normal-looks-like-08ec8d9b4710?source=rss-38fb3f606a9d------2",
       "date": "Thu, 03 Sep 2026 18:50:06 GMT",
@@ -58,18 +69,6 @@
         "cybersecurity",
         "learning",
         "ethical-hacking"
-      ]
-    },
-    {
-      "title": "Windows for SOC Analysts: A Complete Learning Roadmap from Beginner to Job-Ready",
-      "url": "https://medium.com/@HarshKatiyar/windows-for-soc-analysts-a-complete-learning-roadmap-from-beginner-to-job-ready-b831f0e838cb?source=rss-38fb3f606a9d------2",
-      "date": "Mon, 24 Aug 2026 14:01:04 GMT",
-      "description": "If you are starting your cybersecurity journey from scratch and want to become a SOC (Security Operations Center) Analyst , one skill area you cannot afford to ignore is Windows . Windows is one of the most important endpoint environments y",
-      "tags": [
-        "windows",
-        "information-security",
-        "networking",
-        "cybersecurity"
       ]
     }
   ]

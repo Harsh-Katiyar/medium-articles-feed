@@ -1,6 +1,18 @@
 {
   "articles": [
     {
+      "title": "Windows PowerShell Fundamentals for SOC L1: Using PowerShell for Endpoint Investigation",
+      "url": "https://medium.com/@HarshKatiyar/windows-powershell-fundamentals-for-soc-l1-using-powershell-for-endpoint-investigation-5de5eaabea5c?source=rss-38fb3f606a9d------2",
+      "date": "Sun, 06 Sep 2026 05:26:01 GMT",
+      "description": "PowerShell is one of the most important Windows skills for anyone building a foundation in SOC L1 / Tier 1 analysis. It is more than a command-line interface. PowerShell combines a shell, scripting capabilities, and automation functionality",
+      "tags": [
+        "security",
+        "cybersecurity",
+        "windows",
+        "powershell"
+      ]
+    },
+    {
       "title": "Linux Fundamentals for SOC L1: From Basic Commands to Endpoint Investigation",
       "url": "https://medium.com/@HarshKatiyar/linux-fundamentals-for-soc-l1-from-basic-commands-to-endpoint-investigation-41ce5d30de3a?source=rss-38fb3f606a9d------2",
       "date": "Sat, 05 Sep 2026 02:06:00 GMT",
@@ -57,18 +69,6 @@
         "blue-team",
         "security-operation-center",
         "cybersecurity"
-      ]
-    },
-    {
-      "title": "Windows Fundamentals 2: Exploring Windows Tools from a SOC Analyst Perspective",
-      "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-2-exploring-windows-tools-from-a-soc-analyst-perspective-39b0ac662b6d?source=rss-38fb3f606a9d------2",
-      "date": "Thu, 27 Aug 2026 19:59:49 GMT",
-      "description": "Introduction Windows provides a large collection of built-in utilities for system administration, troubleshooting, configuration, and monitoring. For someone learning SOC operations, the important part is not memorizing every Windows utilit",
-      "tags": [
-        "windows",
-        "cybersecurity",
-        "learning",
-        "ethical-hacking"
       ]
     }
   ]

@@ -1,6 +1,17 @@
 {
   "articles": [
     {
+      "title": "Linux Command Line Fundamentals for SOC L1: Building an Endpoint Investigation Mindset",
+      "url": "https://medium.com/@HarshKatiyar/linux-command-line-fundamentals-for-soc-l1-building-an-endpoint-investigation-mindset-48bf3c913190?source=rss-38fb3f606a9d------2",
+      "date": "Mon, 07 Sep 2026 02:31:01 GMT",
+      "description": "The Linux command line is one of the most important foundational skills I’m building while learning SOC L1 / Tier 1 security operations. The objective isn’t to memorize hundreds of Linux commands. Instead, the focus is understanding what th",
+      "tags": [
+        "linux",
+        "technology-trends",
+        "cybersecurity"
+      ]
+    },
+    {
       "title": "Windows PowerShell Fundamentals for SOC L1: Using PowerShell for Endpoint Investigation",
       "url": "https://medium.com/@HarshKatiyar/windows-powershell-fundamentals-for-soc-l1-using-powershell-for-endpoint-investigation-5de5eaabea5c?source=rss-38fb3f606a9d------2",
       "date": "Sun, 06 Sep 2026 05:26:01 GMT",
@@ -57,18 +68,6 @@
         "cyber-security-awareness",
         "blue-team",
         "security"
-      ]
-    },
-    {
-      "title": "Windows Fundamentals 1: Building a Foundation for Windows Security and SOC Analysis",
-      "url": "https://medium.com/@HarshKatiyar/windows-fundamentals-1-building-a-foundation-for-windows-security-and-soc-analysis-a8b13fea8322?source=rss-38fb3f606a9d------2",
-      "date": "Fri, 28 Aug 2026 14:01:04 GMT",
-      "description": "Introduction Before investigating a Windows security alert, it helps to understand what a normal Windows endpoint actually looks like. Windows Fundamentals 1 provides that foundation. The material introduces Windows editions, the graphical ",
-      "tags": [
-        "windows",
-        "blue-team",
-        "security-operation-center",
-        "cybersecurity"
       ]
     }
   ]

@@ -1,6 +1,38 @@
 {
   "projects": [
     {
+      "name": "cleanmeta-pro",
+      "title": "cleanmeta-pro",
+      "subtitle": "",
+      "description": "Privacy-first Windows image metadata cleaner that removes common embedded metadata locally while keeping original files untouched",
+      "category": "Cybersecurity Project",
+      "tools": [],
+      "url": "https://github.com/Harsh-Katiyar/cleanmeta-pro",
+      "language": "Python",
+      "topics": [
+        "cybersecurity",
+        "digital-privacy",
+        "exif",
+        "image-processing",
+        "infosec",
+        "metadata",
+        "metadata-remover",
+        "open-source",
+        "pillow",
+        "portfolio",
+        "privacy",
+        "privacy-tools",
+        "python",
+        "windows"
+      ],
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-09-06T23:40:15Z",
+      "pushed": "2026-09-06T23:40:11Z",
+      "featured": false,
+      "order": 999
+    },
+    {
       "name": "cybersecurity-labs-and-writeups",
       "title": "cybersecurity-labs-and-writeups",
       "subtitle": "",
